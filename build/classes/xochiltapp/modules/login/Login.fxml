@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="IdAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="456.0" styleClass="background" xmlns:fx="http://javafx.com/fxml" fx:controller="xochiltapp.modules.login.LoginController">
+  <children>
+    <AnchorPane id="anchorPane2" prefHeight="399.0" prefWidth="456.0" styleClass="top-segment" AnchorPane.bottomAnchor="101.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <VBox id="VBox" alignment="CENTER" prefHeight="300.0" prefWidth="421.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="50.0">
+          <children>
+            <AnchorPane id="AnchorPane" prefHeight="180.0" prefWidth="430.0">
+              <children>
+                <Label id="label1" layoutX="14.0" layoutY="67.0" text="Usuario" />
+                <TextField id="textField1" fx:id="nombreUsuarioTxt" layoutY="88.0" prefWidth="415.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" />
+                <Label id="label1" layoutX="14.0" layoutY="139.0" text="Contraseña" />
+                <PasswordField id="passwordField1" fx:id="passwordTxt" layoutY="157.0" prefWidth="415.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" />
+                <ImageView id="app-login-logo" layoutY="-12.0">
+                  <image>
+                    <Image url="file:/C:/Users/afelipelc/Documents/NetBeansProjects/FXML-LoginDemo/src/demo/LoginLogo.png" preserveRatio="true" smooth="true" />
+                  </image>
+                </ImageView>
+              </children>
+            </AnchorPane>
+            <Button id="button1" fx:id="loginButton" defaultButton="true" minHeight="43.0" prefHeight="57.0" prefWidth="236.0" text="Ingresar">
+              <VBox.margin>
+                <Insets top="70.0" />
+              </VBox.margin>
+            </Button>
+          </children>
+        </VBox>
+        <HBox id="hBox1" alignment="CENTER" layoutX="14.0" layoutY="289.0" prefHeight="25.0" prefWidth="418.0">
+          <children>
+            <Label id="label2" fx:id="notif" styleClass="notif" />
+          </children>
+        </HBox>
+      </children>
+    </AnchorPane>
+  </children>
+  <stylesheets>
+    <URL value="@Login.css" />
+  </stylesheets>
+</AnchorPane>

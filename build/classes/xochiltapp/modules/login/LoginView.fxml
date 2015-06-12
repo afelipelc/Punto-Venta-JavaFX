@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<BorderPane id="IdAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="387.0" styleClass="background" xmlns:fx="http://javafx.com/fxml" fx:controller="xochiltapp.modules.login.LoginController">
+  <center>
+    <Pane prefHeight="446.0" prefWidth="373.0" styleClass="top-segment">
+      <children>
+        <VBox layoutX="76.0" layoutY="80.0" prefHeight="195.0" prefWidth="236.0">
+          <children>
+            <AnchorPane id="AnchorPane" prefHeight="195.0" prefWidth="236.0">
+              <children>
+                <Label id="label1" layoutX="14.0" layoutY="67.0" text="Username" />
+                <TextField id="textField1" layoutY="86.0" prefWidth="415.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" />
+                <Label id="label1" layoutX="14.0" layoutY="139.0" text="Password" />
+                <PasswordField id="passwordField1" layoutY="157.0" prefWidth="415.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" />
+                <ImageView id="app-login-logo" layoutY="-12.0">
+                  <image>
+                    <Image url="file:/C:/Users/afelipelc/Documents/NetBeansProjects/FXML-LoginDemo/src/demo/LoginLogo.png" preserveRatio="true" smooth="true" />
+                  </image>
+                </ImageView>
+              </children>
+            </AnchorPane>
+          </children>
+        </VBox>
+        <HBox layoutX="76.0" layoutY="285.0" prefHeight="31.0" prefWidth="236.0">
+          <children>
+            <Label id="label2" prefHeight="19.0" />
+          </children>
+        </HBox>
+        <Button layoutX="83.0" layoutY="316.0" mnemonicParsing="false" prefWidth="222.0" text="Button" />
+      </children>
+    </Pane>
+  </center>
+  <stylesheets>
+    <URL value="@Login.css" />
+  </stylesheets>
+</BorderPane>

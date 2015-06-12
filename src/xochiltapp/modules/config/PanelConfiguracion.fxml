@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="javafx.scene.layout.AnchorPane" id="rootPane" fx:id="contenedorPAP" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <FlowPane prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Button fx:id="empleadosButton" mnemonicParsing="false">
+          <graphic>
+            <VBox alignment="CENTER" spacing="7.0">
+              <children>
+                <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@user-card2.png" preserveRatio="false" smooth="false" />
+                  </image>
+                </ImageView>
+                <Label text="Empleados" />
+              </children>
+              <padding>
+                <Insets bottom="2.0" top="2.0" />
+              </padding>
+            </VBox>
+          </graphic>
+        </Button>
+      </children>
+    </FlowPane>
+  </children>
+  <padding>
+    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+  </padding>
+</fx:root>

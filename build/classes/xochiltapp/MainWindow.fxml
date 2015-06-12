@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" styleClass="background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="xochiltapp.MainWindowController">
+  <children>
+    <BorderPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <bottom>
+        <HBox fx:id="contenedorBottom" prefHeight="30.0" prefWidth="200.0" />
+      </bottom>
+      <center>
+        <Pane fx:id="contenedorPrincipal" styleClass="contenedor-principal">
+          <padding>
+            <Insets right="10.0" />
+          </padding>
+          <BorderPane.margin>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+          </BorderPane.margin>
+        </Pane>
+      </center>
+      <left>
+        <VBox fx:id="contenedorMenu" prefWidth="227.0" spacing="9.0" styleClass="background-menu">
+          <children>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="199.0">
+              <children>
+                <Button fx:id="ventasButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="64.0" prefWidth="199.0" text="Ventas" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="199.0">
+              <children>
+                <Button fx:id="pedidosButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="64.0" prefWidth="199.0" text="Pedidos/Rt" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="199.0">
+              <children>
+                <Button id="proveedoresButton" fx:id="corteCajaButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="64.0" prefWidth="199.0" text="Corte / Caja" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="199.0">
+              <children>
+                <Button fx:id="inventarioButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="64.0" prefWidth="199.0" text="Inventario" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="199.0">
+              <children>
+                <Button id="proveedoresButton" fx:id="catalogoButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="64.0" prefWidth="199.0" text="Catálogo" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="199.0">
+              <children>
+                <Button fx:id="proveedoresButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="64.0" prefWidth="199.0" text="Proveedores" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="199.0">
+              <children>
+                <Button id="proveedoresButton" fx:id="comprasButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="64.0" prefWidth="199.0" text="Compras" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="199.0">
+              <children>
+                <Button id="proveedoresButton" fx:id="reportesButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="64.0" prefWidth="199.0" text="Reportes" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="199.0">
+              <children>
+                <Button id="proveedoresButton" fx:id="configButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="64.0" prefWidth="199.0" text="Config." />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="199.0">
+              <children>
+                <Button id="proveedoresButton" fx:id="SalirButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="64.0" prefWidth="199.0" text="Salir" />
+              </children>
+            </HBox>
+          </children>
+          <stylesheets>
+            <URL value="@modules/menu/MenuCss.css" />
+          </stylesheets>
+        </VBox>
+      </left>
+      <right>
+        <AnchorPane prefHeight="445.0" prefWidth="20.0" />
+      </right>
+      <top>
+        <GridPane fx:id="contenedorTop" prefHeight="81.0" styleClass="top-main">
+          <children>
+            <HBox alignment="CENTER_LEFT" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.vgrow="NEVER">
+              <children>
+                <Label fx:id="nombreUsuario" styleClass="empleado" text="Usuario:" />
+              </children>
+              <padding>
+                <Insets left="20.0" />
+              </padding>
+              <GridPane.margin>
+                <Insets fx:id="x1" />
+              </GridPane.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="78.0" prefWidth="503.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+              <Label fx:id="tituloModulo" styleClass="main-title" text="Título del módulo aquí" HBox.margin="$x1" />
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="99.0" prefWidth="324.0" GridPane.columnIndex="2" GridPane.rowIndex="0">
+              <children>
+                <HBox alignment="BOTTOM_CENTER" prefHeight="33.0" prefWidth="443.0">
+                  <children>
+                    <Label fx:id="diaLabel" styleClass="fecha" text="13 Junio" />
+                    <Label styleClass="barra-separador" text="|">
+                      <HBox.margin>
+                        <Insets bottom="4.0" />
+                      </HBox.margin>
+                    </Label>
+                    <Label fx:id="horaLabel" styleClass="hora" text="13:44" />
+                  </children>
+                  <padding>
+                    <Insets bottom="3.0" />
+                  </padding>
+                </HBox>
+              </children>
+            </VBox>
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="196.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="503.0" minWidth="100.0" prefWidth="503.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="354.0" minWidth="5.0" prefWidth="300.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </top>
+    </BorderPane>
+  </children>
+  <stylesheets>
+    <URL value="@css/GeneralCss.css" />
+  </stylesheets>
+</AnchorPane>

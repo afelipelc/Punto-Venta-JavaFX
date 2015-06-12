@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="javafx.scene.layout.BorderPane" fx:id="contenedorPBP" xmlns:fx="http://javafx.com/fxml">
+  <center>
+    <SplitPane dividerPositions="0.547191011235955" focusTraversable="true">
+      <items>
+        <AnchorPane>
+          <children>
+            <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <children>
+                <HBox alignment="CENTER" minHeight="30.0" minWidth="-Infinity" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <children>
+                    <Label styleClass="profileTitle, label-big-monetario" text="Proveedores" />
+                    <Separator prefHeight="0.0" prefWidth="100.0" />
+                    <Button fx:id="agregarProveedorButton" mnemonicParsing="false" onAction="#handleAgregarProveedor_Button" styleClass="small-button" text="Agregar" />
+                  </children>
+                  <padding>
+                    <Insets bottom="8.0" top="6.0" />
+                  </padding>
+                </HBox>
+                <TableView fx:id="proveedoresTable" onMouseClicked="#handleClickProveedores_Table" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                  <columns>
+                    <TableColumn minWidth="70.0" prefWidth="70.0" text="Clave" fx:id="claveProveedorCol" />
+                    <TableColumn minWidth="200.0" prefWidth="200.0" text="Nombre" fx:id="nombreProveedorCol" />
+                    <TableColumn minWidth="130.0" prefWidth="150.0" text="Teléfono" fx:id="telefonoProveedorCol" />
+                  </columns>
+                  <GridPane.margin>
+                    <Insets />
+                  </GridPane.margin>
+                </TableView>
+                <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" minHeight="-Infinity" spacing="10.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                  <children>
+                    <Label text="Total de proveedores:" />
+                    <Label fx:id="totalProveedoresLabel" text="0" />
+                  </children>
+                  <padding>
+                    <Insets bottom="10.0" left="10.0" right="20.0" top="10.0" />
+                  </padding>
+                </HBox>
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="NEVER" />
+                <RowConstraints vgrow="ALWAYS" />
+                <RowConstraints minHeight="-Infinity" vgrow="NEVER" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+        </AnchorPane>
+        <AnchorPane>
+          <children>
+            <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <children>
+                <HBox alignment="CENTER" minHeight="30.0" minWidth="-Infinity" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <children>
+                    <Label styleClass="label-big-monetario" text="Productos" />
+                  </children>
+                  <padding>
+                    <Insets bottom="10.0" top="6.0" />
+                  </padding>
+                </HBox>
+                <TableView fx:id="productosProveedorTable" minWidth="400.0" onMouseClicked="#handleClickProductosProveedor_Table" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                  <columns>
+                    <TableColumn prefWidth="75.0" text="Clave" fx:id="claveProductoCol" />
+                    <TableColumn minWidth="210.0" prefWidth="210.0" text="Concepto" fx:id="conceptoProductoCol" />
+                    <TableColumn minWidth="175.0" prefWidth="175.0" text="Actualizado" fx:id="actualizacionProductoCol" />
+                  </columns>
+                </TableView>
+                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                  <children>
+                    <Label text="Total de productos:" />
+                    <Label fx:id="totalProductosProveedorLabel" text="0" />
+                  </children>
+                  <padding>
+                    <Insets bottom="10.0" left="50.0" right="20.0" top="10.0" />
+                  </padding>
+                </HBox>
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="-Infinity" vgrow="NEVER" />
+                <RowConstraints vgrow="ALWAYS" />
+                <RowConstraints vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+        </AnchorPane>
+      </items>
+      <BorderPane.margin>
+        <Insets />
+      </BorderPane.margin>
+    </SplitPane>
+  </center>
+  <padding>
+    <Insets left="15.0" right="10.0" top="10.0" />
+  </padding>
+</fx:root>

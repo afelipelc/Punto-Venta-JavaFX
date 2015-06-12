@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="javafx.scene.layout.BorderPane" fx:id="contenedorPBP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <bottom>
+    <HBox alignment="CENTER_LEFT" spacing="15.0">
+      <children>
+        <Separator opacity="0.0" prefWidth="320.0" />
+        <Label styleClass="label-big-monetario" text="Total de artículos:" />
+        <Label fx:id="totalArticulosLabel" styleClass="label-big-monetario" text="0" />
+      </children>
+      <padding>
+        <Insets bottom="20.0" top="15.0" />
+      </padding>
+    </HBox>
+  </bottom>
+  <center>
+    <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+      <children>
+        <HBox alignment="CENTER_LEFT" spacing="15.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <children>
+            <HBox alignment="CENTER_LEFT" spacing="8.0">
+              <children>
+                <Button fx:id="verPendientesButton" mnemonicParsing="false" prefWidth="137.0" styleClass="boton-icon" text="Mas Pedidos">
+                  <graphic>
+                    <ImageView fitHeight="26.0" fitWidth="26.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@../../css/list.png" preserveRatio="false" smooth="false" />
+                      </image>
+                    </ImageView>
+                  </graphic>
+                </Button>
+                <Separator prefWidth="10.0" />
+                <Label text="Agregar:" />
+                <TextField id="claveProductoAgregar" fx:id="claveProductoAgregarText" prefWidth="242.0" />
+                <Separator prefWidth="10.0" />
+                <Label text="Cant." />
+                <TextField fx:id="cantidadProductoAgregarText" prefWidth="60.0" text="1" />
+              </children>
+              <padding>
+                <Insets left="12.0" />
+              </padding>
+            </HBox>
+          </children>
+          <padding>
+            <Insets bottom="10.0" top="8.0" />
+          </padding>
+        </HBox>
+        <TableView id="tablaDetallesVenta" fx:id="tablaDetallePedidoRenta" maxWidth="1.7976931348623157E308" minWidth="640.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+          <columns>
+            <TableColumn prefWidth="75.0" text="Clave" fx:id="ClaveCol" />
+            <TableColumn minWidth="240.0" prefWidth="250.0" text="Descripción" fx:id="DescripcionCol" />
+            <TableColumn minWidth="75.0" text="P. U." fx:id="precioUnitarioCol" />
+            <TableColumn prefWidth="75.0" text="Cant." fx:id="cantidadCol" />
+            <TableColumn minWidth="75.0" text="Importe" fx:id="importeCol" />
+          </columns>
+        </TableView>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="-Infinity" vgrow="NEVER" />
+        <RowConstraints vgrow="ALWAYS" />
+      </rowConstraints>
+    </GridPane>
+  </center>
+  <right>
+    <VBox alignment="TOP_LEFT" fillWidth="false" minWidth="280.0" spacing="2.0">
+      <children>
+        <Label fx:id="notificacionLabel" maxHeight="1.7976931348623157E308" maxWidth="-1.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="320.0" styleClass="notif" wrapText="true">
+          <VBox.margin>
+            <Insets fx:id="x4" />
+          </VBox.margin>
+        </Label>
+        <Accordion maxHeight="-1.0" maxWidth="320.0" minHeight="-1.0" minWidth="300.0" prefHeight="-1.0" VBox.vgrow="SOMETIMES">
+          <panes>
+            <TitledPane id="x1" fx:id="totalesTP" alignment="TOP_LEFT" animated="false" collapsible="true" expanded="false" minWidth="-Infinity" text="TOTALES">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0">
+                  <children>
+                    <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <children>
+                        <HBox prefHeight="35.0" prefWidth="200.0" spacing="10.0">
+                          <children>
+                            <Label text="Solicitado:" />
+                            <Label fx:id="fechaSolicitudLabel" />
+                          </children>
+                          <VBox.margin>
+                            <Insets fx:id="x4" />
+                          </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT">
+                          <children>
+                            <Label styleClass="label-big-monetario" text="Importe:" />
+                            <Label fx:id="importeTotalLabel" alignment="CENTER_RIGHT" minWidth="162.0" styleClass="importe-pagar" text="\$ 0.00" />
+                          </children>
+                          <padding>
+                            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                          </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                          <children>
+                            <Label styleClass="label-big-monetario" text="Su Abono:" />
+                            <TextField id="suPagoText" fx:id="suAbonoText" maxWidth="132.0" promptText="0" styleClass="su-pago" />
+                          </children>
+                          <padding>
+                            <Insets bottom="12.0" top="5.0" />
+                          </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT">
+                          <children>
+                            <Label styleClass="label-big-monetario" text="Su Adeudo:" />
+                            <Label id="suCambioLabel" fx:id="suAdeudoLabel" alignment="CENTER_RIGHT" minWidth="130.0" styleClass="su-adeudo" text="\$ 0.00" />
+                          </children>
+                          <padding>
+                            <Insets bottom="5.0" right="2.0" top="2.0" />
+                          </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT">
+                          <children>
+                            <Label styleClass="label-big-monetario" text="Su Cambio:" />
+                            <Label fx:id="suCambioLabel" alignment="CENTER_RIGHT" minWidth="130.0" styleClass="su-cambio" text="\$ 0.00" />
+                          </children>
+                          <padding>
+                            <Insets bottom="10.0" right="2.0" top="2.0" />
+                          </padding>
+                        </HBox>
+                      </children>
+                    </VBox>
+                  </children>
+                  <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x3" />
+                  </padding>
+                </AnchorPane>
+              </content>
+            </TitledPane>
+            <TitledPane fx:id="datosClienteTP" animated="false" expanded="false" minWidth="-Infinity" text="DATOS DEL CLIENTE">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0">
+                  <children>
+                    <VBox fx:id="datosClienteVB" spacing="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <children>
+                        <Label text="Cliente: *" />
+                        <TextField id="domicilioCliente" fx:id="nombreCliente" prefWidth="200.0" />
+                        <Label text="Domicilio del cliente:">
+                          <VBox.margin>
+                            <Insets top="5.0" fx:id="x2" />
+                          </VBox.margin>
+                        </Label>
+                        <TextField fx:id="domicilioCliente" prefWidth="200.0" />
+                        <Label text="Referencia de domicilio:">
+                          <VBox.margin>
+                            <Insets top="5.0" fx:id="x2" />
+                          </VBox.margin>
+                        </Label>
+                        <TextField id="domicilioCliente" fx:id="refDomClienteText" prefWidth="200.0" />
+                        <Label text="Teléfono:">
+                          <VBox.margin>
+                            <Insets top="5.0" fx:id="x2" />
+                          </VBox.margin>
+                        </Label>
+                        <TextField id="domicilioCliente" fx:id="telefonoText" prefWidth="200.0" />
+                        <Label text="Teléfono 2:">
+                          <VBox.margin>
+                            <Insets top="5.0" fx:id="x2" />
+                          </VBox.margin>
+                        </Label>
+                        <TextField id="domicilioCliente" fx:id="telefono2Text" prefWidth="200.0" />
+                      </children>
+                      <padding>
+                        <Insets bottom="12.0" fx:id="x1" />
+                      </padding>
+                    </VBox>
+                  </children>
+                  <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x3" />
+                  </padding>
+                </AnchorPane>
+              </content>
+            </TitledPane>
+            <TitledPane fx:id="DatosPedidoTP" animated="false" text="DATOS DE LA ENTREGA">
+              <content>
+                <AnchorPane id="Content" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" padding="$x3">
+                  <children>
+                    <VBox id="datosPedidoVB" padding="$x1" spacing="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <children>
+                        <Label text="Dirección de entrega: *" VBox.margin="$x2" />
+                        <TextField id="direccionEntregaCliente" fx:id="direccionEntregaText" prefHeight="31.0" prefWidth="229.0" />
+                        <Label text="Nombre de quien Recibe: *" VBox.margin="$x2" />
+                        <TextField fx:id="nombreRecibe" prefWidth="200.0" />
+                        <Label id="idfechahora" fx:id="fechaEntregaLabel" text="Fecha y hora de entrega: *" VBox.margin="$x2" />
+                        <HBox id="fechaHoraEntrega" fx:id="fechaHoraEntregaHB" spacing="3.0">
+                          <children>
+                            <TextField fx:id="horaEntrega" prefWidth="90.0" promptText="hh:mm" />
+                          </children>
+                        </HBox>
+                        <Label text="Nota adicional:">
+                          <VBox.margin>
+                            <Insets top="5.0" fx:id="x2" />
+                          </VBox.margin>
+                        </Label>
+                        <TextArea fx:id="notaAdicional" prefHeight="100.0" wrapText="true" />
+                      </children>
+                    </VBox>
+                  </children>
+                </AnchorPane>
+              </content>
+            </TitledPane>
+          </panes>
+          <VBox.margin>
+            <Insets fx:id="x4" />
+          </VBox.margin>
+        </Accordion>
+        <VBox alignment="CENTER" fillWidth="true" prefWidth="316.0" spacing="15.0" VBox.margin="$x4">
+          <children>
+            <Button id="cobrarButton" fx:id="guardarButton" mnemonicParsing="false" text="Registrar Pedido">
+              <VBox.margin>
+                <Insets fx:id="x4" />
+              </VBox.margin>
+            </Button>
+            <Button fx:id="cancelarButton" mnemonicParsing="false" styleClass="btn-cancelar" text="Cancelar" />
+          </children>
+          <padding>
+            <Insets bottom="10.0" top="10.0" />
+          </padding>
+        </VBox>
+      </children>
+      <padding>
+        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+      </padding>
+      <BorderPane.margin>
+        <Insets bottom="-35.0" />
+      </BorderPane.margin>
+    </VBox>
+  </right>
+  <stylesheets>
+    <URL value="@../../css/GeneralCss.css" />
+    <URL value="@../../css/AutoFillText.css" />
+  </stylesheets>
+</fx:root>

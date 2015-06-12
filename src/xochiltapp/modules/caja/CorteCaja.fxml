@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="javafx.scene.layout.BorderPane" id="rootPane" fx:id="contenedorPBP" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml" >
+  <bottom>
+    <HBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0">
+      <children>
+        <Button fx:id="crearCorteButton" mnemonicParsing="false" text="Generar Corte de Caja" />
+      </children>
+    </HBox>
+  </bottom>
+  <center>
+    <TableView fx:id="detallesCorteTable" maxWidth="440.0" minHeight="-Infinity" prefHeight="220.0">
+      <columns>
+        <TableColumn minWidth="190.0" prefWidth="200.0" text="Concepto" fx:id="conceptoCol" />
+        <TableColumn minWidth="95.0" prefWidth="100.0" styleClass="derecha" text="Cantidad" fx:id="cantidadCol" />
+        <TableColumn minWidth="100.0" prefWidth="110.0" styleClass="derecha" text="Ingreso" fx:id="ingresoCol" />
+      </columns>
+      <BorderPane.margin>
+        <Insets top="10.0" />
+      </BorderPane.margin>
+    </TableView>
+  </center>
+  <padding>
+    <Insets bottom="20.0" left="50.0" right="20.0" top="15.0" />
+  </padding>
+  <stylesheets>
+    <URL value="@../../css/GeneralCss.css" />
+  </stylesheets>
+  <top>
+    <GridPane>
+      <children>
+        <HBox alignment="CENTER" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+          <children>
+            <Label styleClass="label-big-monetario" text="Datos del Corte en Ventas y Pedidos" />
+          </children>
+        </HBox>
+        <Separator GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+        <HBox alignment="CENTER_RIGHT" styleClass="label-container" GridPane.columnIndex="0" GridPane.rowIndex="2">
+          <children>
+            <Label text="Fecha/Hora de Apertura:" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_RIGHT" styleClass="label-container" GridPane.columnIndex="0" GridPane.rowIndex="3">
+          <children>
+            <Label text="Fecha/Hora de Cierre:" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_RIGHT" styleClass="label-container" GridPane.columnIndex="0" GridPane.rowIndex="4">
+          <children>
+            <Label text="Monto Inicial en Caja:" />
+          </children>
+          <padding>
+            <Insets top="15.0" />
+          </padding>
+        </HBox>
+        <HBox alignment="CENTER_RIGHT" styleClass="label-container" GridPane.columnIndex="0" GridPane.rowIndex="5">
+          <children>
+            <Label text="Ingresos del Día:" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_RIGHT" styleClass="label-container" GridPane.columnIndex="0" GridPane.rowIndex="6">
+          <children>
+            <Label text="Monto Final en Caja:" />
+          </children>
+          <padding>
+            <Insets top="15.0" />
+          </padding>
+        </HBox>
+        <Separator prefWidth="200.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+        <HBox alignment="CENTER_RIGHT" styleClass="label-container" GridPane.columnIndex="0" GridPane.rowIndex="8">
+          <children>
+            <Label text="Empleado Abre:" />
+          </children>
+          <padding>
+            <Insets top="15.0" />
+          </padding>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="2">
+          <children>
+            <Label fx:id="FHAperturaLabel" text="dd/MM/yy HH:mm:ss" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="3">
+          <children>
+            <Label fx:id="FHCierreLabel" text="dd/MM/yy HH:mm:ss" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="4">
+          <children>
+            <Label fx:id="montoInicioLabel" styleClass="bold-label" text="\$0.00" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="5">
+          <children>
+            <Label fx:id="ingresoDiaLabel" styleClass="label-big-monetario" text="\$0.00" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="6">
+          <children>
+            <Label fx:id="montoFinalLabel" styleClass="label-big-monetario" text="\$0.00" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="8">
+          <children>
+            <Label fx:id="empleadoAbreLabel" text="-" />
+          </children>
+        </HBox>
+        <Separator prefWidth="200.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="9" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" />
+        <ColumnConstraints hgrow="SOMETIMES" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="25.0" prefHeight="30.0" valignment="CENTER" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="NEVER" />
+        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES" />
+      </rowConstraints>
+      <BorderPane.margin>
+        <Insets />
+      </BorderPane.margin>
+    </GridPane>
+  </top>
+</fx:root>

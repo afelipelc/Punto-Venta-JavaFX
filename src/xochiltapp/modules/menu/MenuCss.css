@@ -1,0 +1,41 @@
+/* 
+    Document   : MenuCss
+    Created on : 12/06/2013, 08:41:29 PM
+    Author     : afelipelc
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+
+.button {
+    -fx-background-color:
+        linear-gradient(rgba(255,255,255,0.5) 93%, #a6c93c 97%, #b4d44c 100%);
+    -fx-background-radius: 7, 6, 5, 4, 3, 5;
+    -fx-background-insets: -3 -3 -4 -3, -3, 0, 1, 2, 0;
+	-fx-font-family: "Arial";
+    -fx-text-fill: #15507a;
+    -fx-font-size: 28;
+    
+    -fx-padding: 10 10 10 -15;
+    -fx-text-alignment: left;
+    
+    -fx-background-image: url("dirder.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 165,10;
+}
+
+.button:focused, .button:hover {
+-fx-background-color:
+        linear-gradient(rgba(142,189,49,0.1) 93%, #a6c93c 97%, #b4d44c 100%);
+}
+
+.background-menu{
+    -fx-padding: 10 10 0 0;
+    -fx-background-color: rgba(255,255,255, 0.2);
+    -fx-background-radius: 7, 6, 5, 4, 3, 5;
+    -fx-background-insets: 0 2 2 -3, -3, 0, 1, 1, 0;
+}

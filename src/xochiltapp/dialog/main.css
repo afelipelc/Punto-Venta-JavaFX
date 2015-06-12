@@ -1,0 +1,19 @@
+/* 
+    Document   : main
+    Created on : 14/08/2013, 02:31:15 PM
+    Author     : alfonso
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.root { 
+    -fx-background-color:linear-gradient(white,#DDDDDD);
+    -fx-border-color: transparent;
+    -fx-border-radius: 20;
+    -fx-padding: 10 10 10 10;
+    -fx-background-radius: 20;
+}
+
+.button {
+    -fx-font-size: 10px;
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="326.0" prefWidth="379.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="xochiltapp.modules.compra.PrecioCompraProductoController">
+  <children>
+    <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Label styleClass="profileTitle" text="Proveedor y precio de compra." />
+        <VBox maxWidth="-Infinity" minWidth="-Infinity" spacing="5.0">
+          <children>
+            <Label text="Proveedor:" />
+            <ComboBox fx:id="proveedoresCmb" prefWidth="250.0" promptText="Seleccionar Proveedor">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <Label text="Precio de compra:">
+              <VBox.margin>
+                <Insets top="10.0" />
+              </VBox.margin>
+            </Label>
+            <TextField fx:id="precioCompraText" prefWidth="200.0" promptText="Ingrese números" />
+            <Label fx:id="notifLabel" styleClass="notif">
+              <VBox.margin>
+                <Insets left="20.0" top="5.0" />
+              </VBox.margin>
+            </Label>
+          </children>
+          <padding>
+            <Insets bottom="10.0" left="5.0" right="5.0" top="15.0" />
+          </padding>
+        </VBox>
+        <HBox alignment="CENTER" maxWidth="-Infinity" spacing="20.0">
+          <children>
+            <Button fx:id="aceptarButton" defaultButton="true" mnemonicParsing="false" text="Aceptar" />
+            <Button fx:id="cancelarButton" cancelButton="true" mnemonicParsing="false" styleClass="btn-cancelar" text="Cancelar" />
+          </children>
+          <padding>
+            <Insets top="10.0" />
+          </padding>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+  <padding>
+    <Insets bottom="10.0" right="10.0" top="20.0" />
+  </padding>
+  <stylesheets>
+    <URL value="@../../css/GeneralCss.css" />
+  </stylesheets>
+</AnchorPane>

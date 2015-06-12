@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="327.0" styleClass="text-size-form, background" xmlns:fx="http://javafx.com/fxml" fx:controller="xochiltapp.modules.caja.AbrirCajaController">
+  <children>
+    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <VBox alignment="CENTER" prefHeight="115.0" prefWidth="303.0">
+          <children>
+            <Label styleClass="form-title" text="Saldo inicial en Caja">
+              <VBox.margin>
+                <Insets bottom="10.0" />
+              </VBox.margin>
+            </Label>
+            <TextField fx:id="saldoInicialText" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="250.0" promptText="Saldo en números" />
+          </children>
+        </VBox>
+        <HBox alignment="CENTER_RIGHT" prefHeight="76.0" prefWidth="303.0" spacing="20.0">
+          <children>
+            <Button fx:id="aceptarButton" defaultButton="true" mnemonicParsing="false" text="Aceptar" />
+            <Button fx:id="cancelarButton" cancelButton="true" mnemonicParsing="false" text="Cancelar" />
+          </children>
+          <padding>
+            <Insets right="30.0" top="10.0" />
+          </padding>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+  <stylesheets>
+    <URL value="@../../css/formcss.css" />
+  </stylesheets>
+</AnchorPane>

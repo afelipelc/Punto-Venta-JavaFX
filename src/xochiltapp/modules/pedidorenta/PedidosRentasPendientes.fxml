@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="953.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="xochiltapp.modules.pedidorenta.PedidosRentasPendientesController">
+  <children>
+    <TableView fx:id="pedidosRentasTable" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <columns>
+        <TableColumn minWidth="80.0" prefWidth="90.0" text="No." fx:id="idPedidoRCol" />
+        <TableColumn minWidth="180.0" prefWidth="185.0" text="Cliente" fx:id="clienteCol" />
+        <TableColumn minWidth="65.0" prefWidth="70.0" text="Tipo" fx:id="tipoCol" />
+        <TableColumn minWidth="150.0" prefWidth="155.0" text="Fecha Solicitud" fx:id="fechaSolicitudCol" />
+        <TableColumn minWidth="150.0" prefWidth="155.0" text="Fecha Entrega" fx:id="fechaEntregaCol" />
+        <TableColumn minWidth="150.0" prefWidth="155.0" text="Estado" fx:id="estadoCol" />
+        <TableColumn minWidth="110.0" prefWidth="110.0" text="Importe" fx:id="importeCol" />
+      </columns>
+    </TableView>
+  </children>
+  <padding>
+    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+  </padding>
+  <stylesheets>
+    <URL value="@../../css/GeneralCss.css" />
+  </stylesheets>
+</AnchorPane>

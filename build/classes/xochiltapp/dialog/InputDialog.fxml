@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color:transparent;" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="xochiltapp.dialog.InputDialogController">
+  <children>
+    <AnchorPane id="AnchorPane" prefHeight="-1.0" prefWidth="-1.0" styleClass="root" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <VBox id="VBox" alignment="CENTER" layoutY="71.0" prefHeight="-1.0" prefWidth="-1.0" spacing="5.0" AnchorPane.leftAnchor="77.0" AnchorPane.rightAnchor="36.0">
+          <children>
+            <StackPane id="StackPane" alignment="CENTER_LEFT">
+              <children>
+                <Label fx:id="lblMsg" alignment="TOP_LEFT" minWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="" text="(MESSAGE HERE)" textAlignment="JUSTIFY" wrapText="true">
+                  <font>
+                    <Font size="13.0" />
+                  </font>
+                  <StackPane.margin>
+                    <Insets bottom="3.0" />
+                  </StackPane.margin>
+                </Label>
+              </children>
+            </StackPane>
+            <TextField fx:id="inputField" prefHeight="30.0" prefWidth="200.0" />
+            <HBox id="HBox" alignment="CENTER_RIGHT" minHeight="34.0" prefHeight="34.0" prefWidth="200.0" spacing="5.0">
+              <children>
+                <Button fx:id="btnAccept" defaultButton="true" mnemonicParsing="false" onAction="#accept" prefHeight="23.0" prefWidth="83.0" text="OK" />
+                <Button fx:id="btnDecline" mnemonicParsing="false" onAction="#decline" prefHeight="23.0" prefWidth="93.0" text="Cancel" />
+              </children>
+              <padding>
+                <Insets right="5.0" top="20.0" />
+              </padding>
+            </HBox>
+          </children>
+        </VBox>
+        <HBox id="headerPane" alignment="CENTER" layoutY="14.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color:dodgerblue;" AnchorPane.leftAnchor="-11.0" AnchorPane.rightAnchor="-11.0">
+          <children>
+            <Label fx:id="lblHeader" alignment="CENTER_LEFT" prefWidth="-1.0" text="INPUT DIALOG" textFill="WHITE" HBox.hgrow="ALWAYS">
+              <font>
+                <Font name="System Bold" size="25.0" />
+              </font>
+              <HBox.margin>
+                <Insets left="10.0" right="10.0" />
+              </HBox.margin>
+            </Label>
+          </children>
+          <padding>
+            <Insets />
+          </padding>
+        </HBox>
+        <ImageView fx:id="icon" fitHeight="64.0" fitWidth="64.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="2.0">
+          <image>
+            <Image url="@icons/input64.png" />
+          </image>
+        </ImageView>
+      </children>
+      <effect>
+        <DropShadow height="25.03174603174603" radius="12.015873015873016" width="25.03174603174603" />
+      </effect>
+    </AnchorPane>
+  </children>
+  <stylesheets>
+    <URL value="@main.css" />
+  </stylesheets>
+</AnchorPane>

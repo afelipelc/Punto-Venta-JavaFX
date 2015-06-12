@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="237.00009999999747" prefWidth="357.9998779296875" styleClass="text-size-form" xmlns:fx="http://javafx.com/fxml" fx:controller="xochiltapp.modules.inventario.EditarPrecioProveedorController">
+  <children>
+    <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="478.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <children>
+            <Label styleClass="label-bold" text="Precio del  Producto : Proveedor" />
+          </children>
+        </HBox>
+        <VBox spacing="6.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+          <children>
+            <Label text="Producto:" />
+            <TextField fx:id="conceptoText" disable="true" editable="false" prefWidth="200.0" promptText="Concepto" />
+            <Label text="Precio del proveedor:">
+              <VBox.margin>
+                <Insets top="10.0" />
+              </VBox.margin>
+            </Label>
+            <TextField fx:id="precioProveedorText" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="153.0" />
+          </children>
+          <padding>
+            <Insets bottom="10.0" left="50.0" right="50.0" top="20.0" />
+          </padding>
+        </VBox>
+        <HBox alignment="CENTER_RIGHT" spacing="10.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+          <children>
+            <Button fx:id="cancelarButton" cancelButton="true" mnemonicParsing="false" text="Cancelar" />
+            <Button fx:id="aceptarButton" defaultButton="true" mnemonicParsing="false" text="Aceptar" />
+          </children>
+          <padding>
+            <Insets bottom="15.0" right="15.0" top="10.0" />
+          </padding>
+        </HBox>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="ALWAYS" />
+        <RowConstraints vgrow="NEVER" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+  <stylesheets>
+    <URL value="@../../css/formcss.css" />
+  </stylesheets>
+</AnchorPane>

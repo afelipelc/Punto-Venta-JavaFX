@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="581.0" prefWidth="478.0" styleClass="text-size-form" xmlns:fx="http://javafx.com/fxml" fx:controller="xochiltapp.modules.inventario.ProductoFormController">
+  <children>
+    <GridPane prefHeight="581.0" prefWidth="478.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <HBox alignment="CENTER" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+          <children>
+            <Label styleClass="form-title" text="Producto" />
+          </children>
+        </HBox>
+        <GridPane alignment="CENTER" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+          <children>
+            <HBox alignment="CENTER_RIGHT" prefWidth="200.0" styleClass="label-container" GridPane.columnIndex="0" GridPane.rowIndex="0">
+              <children>
+                <Label text="Clave:" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefWidth="200.0" styleClass="label-container" GridPane.columnIndex="0" GridPane.rowIndex="1">
+              <children>
+                <Label text="Nombre:" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefWidth="200.0" styleClass="label-container" GridPane.columnIndex="0" GridPane.rowIndex="2">
+              <children>
+                <Label text="Categoría:" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" styleClass="text-field-container" GridPane.columnIndex="1" GridPane.rowIndex="0">
+              <children>
+                <TextField id="claveProducto" fx:id="claveProductoTxt" editable="false" prefWidth="220.0" promptText="Asignación Automática" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" styleClass="text-field-container" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <children>
+                <TextField fx:id="conceptoTxt" prefWidth="220.0" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" styleClass="text-field-container" GridPane.columnIndex="1" GridPane.rowIndex="2">
+              <children>
+                <ComboBox fx:id="categoriaCmb" onAction="#handleCategoriaCmb_Action" prefWidth="199.0" promptText="Seleccionar" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" styleClass="text-field-container" GridPane.columnIndex="1" GridPane.rowIndex="3">
+              <children>
+                <TextField fx:id="precioUnitarioTxt" prefWidth="103.0" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefWidth="200.0" styleClass="label-container" GridPane.columnIndex="0" GridPane.rowIndex="3">
+              <children>
+                <Label text="Precio Unitario:" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefWidth="200.0" styleClass="label-container" GridPane.columnIndex="0" GridPane.rowIndex="4">
+              <children>
+                <Label text="Existencias:" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" styleClass="label-container" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <HBox alignment="CENTER_RIGHT" prefWidth="200.0" styleClass="label-container" GridPane.columnIndex="0" GridPane.rowIndex="6">
+              <children>
+                <Label text="Última actualización:" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" styleClass="text-field-container" GridPane.columnIndex="1" GridPane.rowIndex="4">
+              <children>
+                <TextField fx:id="existenciasTxt" prefWidth="103.0" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="text-field-container" GridPane.columnIndex="1" GridPane.rowIndex="5">
+              <children>
+                <CheckBox fx:id="activoChk" mnemonicParsing="false" text="Activo" />
+              </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefWidth="200.0" styleClass="text-field-container" GridPane.columnIndex="1" GridPane.rowIndex="6">
+              <children>
+                <Label fx:id="ultimaActualizacionLabel" />
+              </children>
+            </HBox>
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="217.0" minWidth="10.0" prefWidth="189.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="279.0" minWidth="10.0" prefWidth="279.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+          </rowConstraints>
+          <GridPane.margin>
+            <Insets />
+          </GridPane.margin>
+        </GridPane>
+        <VBox alignment="TOP_CENTER" spacing="12.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="2">
+          <children>
+            <Line endX="450.0" />
+            <HBox alignment="CENTER_LEFT" snapToPixel="false" spacing="10.0" styleClass="back-sub-bar">
+              <children>
+                <Label styleClass="label-bold" text="Proveedores:">
+                  <HBox.margin>
+                    <Insets left="25.0" />
+                  </HBox.margin>
+                </Label>
+                <Button fx:id="quitarPSeleccionadoBtn" mnemonicParsing="false" onAction="#handleQuitarProveedorBtn_Action" styleClass="button-small" text="Quitar seleccionado" />
+                <Button fx:id="agregarProvBtn" mnemonicParsing="false" onAction="#handleAgregarProveedorBtn_Action" styleClass="button-small" text="Agregar nuevo" />
+              </children>
+              <VBox.margin>
+                <Insets left="10.0" right="10.0" />
+              </VBox.margin>
+            </HBox>
+            <TableView fx:id="proveedoresTbl" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn prefWidth="200.0" text="Nombre" fx:id="nombreCol" />
+                <TableColumn prefWidth="150.0" text="Teléfono" fx:id="telefonoCol" />
+                <TableColumn minWidth="80.0" prefWidth="85.0" text="Precio" fx:id="PrecioCol" />
+              </columns>
+              <VBox.margin>
+                <Insets bottom="10.0" left="20.0" right="20.0" top="5.0" />
+              </VBox.margin>
+            </TableView>
+          </children>
+          <padding>
+            <Insets top="20.0" />
+          </padding>
+        </VBox>
+        <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" prefHeight="44.0" prefWidth="478.0" spacing="15.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="3">
+          <children>
+            <Button fx:id="aceptarBtn" defaultButton="true" mnemonicParsing="false" text="Guardar" />
+            <Button fx:id="cancelarBtn" cancelButton="true" mnemonicParsing="false" text="Cancelar" />
+          </children>
+          <padding>
+            <Insets right="50.0" />
+          </padding>
+          <GridPane.margin>
+            <Insets bottom="20.0" />
+          </GridPane.margin>
+        </HBox>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="-Infinity" prefHeight="240.0" vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="-Infinity" prefHeight="70.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+  <stylesheets>
+    <URL value="@../../css/formcss.css" />
+  </stylesheets>
+</AnchorPane>

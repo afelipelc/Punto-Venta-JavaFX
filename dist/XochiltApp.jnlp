@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="XochiltApp.jnlp">
+  <information>
+    <title>XochiltApp</title>
+    <vendor>afelipelc</vendor>
+    <description>Sample JavaFX 2.0 application.</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <jfx:javafx-runtime version="2.2+" href="http://javadl.sun.com/webapps/download/GetFile/javafx-latest/windows-i586/javafx2.jnlp"/>
+  </resources>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="XochiltApp.jar" size="563402" download="eager" />
+    <jar href="lib/itextpdf-5.4.2.jar" size="2007627" download="eager" />
+    <jar href="lib/mysql-connector-java-5.1.25-bin.jar" size="879360" download="eager" />
+    <jar href="lib/schudt-javafx-datepicker-0.0.2.jar" size="72593" download="eager" />
+  </resources>
+<security>
+  <all-permissions/>
+</security>
+  <applet-desc  width="1024" height="768" main-class="com.javafx.main.NoJavaFXFallback"  name="XochiltApp" >
+    <param name="requiredFXVersion" value="2.2+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="1024" height="768" main-class="xochiltapp.MainApp"  name="XochiltApp" />
+  <update check="always"/>
+</jnlp>

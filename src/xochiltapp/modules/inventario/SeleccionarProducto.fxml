@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="xochiltapp.modules.inventario.SeleccionarProductoController">
+  <children>
+    <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <children>
+            <Button fx:id="cerrarButton" cancelButton="true" minWidth="0.0" mnemonicParsing="false" prefWidth="0.0" visible="false" />
+            <Label text="Buscar:" />
+            <TextField fx:id="buscarProductoText" />
+            <Label fx:id="notificLabel" styleClass="notif">
+              <HBox.margin>
+                <Insets left="30.0" />
+              </HBox.margin>
+            </Label>
+          </children>
+          <padding>
+            <Insets left="20.0" right="20.0" />
+          </padding>
+        </HBox>
+        <TableView fx:id="inventarioTable" maxHeight="1.7976931348623157E308" GridPane.rowIndex="1">
+          <columns>
+            <TableColumn minWidth="100.0" prefWidth="100.0" styleClass="derecha" text="Clave" fx:id="ClaveCol" />
+            <TableColumn minWidth="290.0" prefWidth="290.0" text="Descripción" fx:id="DescripcionCol" />
+            <TableColumn minWidth="80.0" styleClass="derecha" text="P. U." fx:id="PUCol" />
+            <TableColumn prefWidth="75.0" styleClass="derecha" text="Exist." fx:id="ExistsCol" />
+          </columns>
+          <GridPane.margin>
+            <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+          </GridPane.margin>
+        </TableView>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <padding>
+        <Insets bottom="10.0" right="10.0" top="10.0" />
+      </padding>
+      <rowConstraints>
+        <RowConstraints minHeight="35.0" prefHeight="35.0" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+  <stylesheets>
+    <URL value="@../../css/GeneralCss.css" />
+  </stylesheets>
+</AnchorPane>

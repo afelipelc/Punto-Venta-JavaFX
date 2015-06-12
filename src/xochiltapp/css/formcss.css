@@ -1,0 +1,69 @@
+/* 
+    Document   : formcss
+    Created on : 13/06/2013, 01:54:15 PM
+    Author     : afelipelc
+    Description:
+        Purpose of the stylesheet follows.
+*/
+.background {
+    /*-fx-background-image: url("CoarseGrid.png");*/
+    -fx-background-repeat: repeat;
+	-fx-background-color:
+        linear-gradient(#157cb3 0%, #258dc2 20%, #bde6f0 100%)
+        ,linear-gradient(#267c91, #fafeff),
+        radial-gradient(center 50% 0%, radius 100%, rgba(191,231,242,0.9), rgba(225,243,247,0.2));
+}
+root { 
+    display: block;
+}
+
+.label{
+    -fx-font-family: "Arial";
+    -fx-font-size: 16;
+    -fx-text-fill: rgba(0, 0, 0, 0.9);
+    -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.3), 0, 0.0 , 0 , 1 ); 
+}
+
+.label-container{
+    -fx-padding: 10 10 10 0;
+}
+
+.label-bold{
+    -fx-font-weight: bold;
+}
+
+.text-field-container{
+    -fx-padding: 0 0 0 10;
+}
+
+.text-size-form{
+    -fx-font-size: 16;
+}
+
+.form-title{
+     -fx-font-family: "Arial";
+    -fx-text-fill: #15507a;
+    -fx-font-size: 26;
+    -fx-font-weight: bold;
+
+}
+
+.back-sub-bar {
+    /*-fx-background-image: url("CoarseGrid.png");*/
+    -fx-background-repeat: repeat;
+	-fx-background-color:
+        linear-gradient(#cfcfcf 0%, #c0c0c0 40%, #cfcfcf 100%);
+}
+
+.button{
+    -fx-font-size: 20;
+    -fx-padding: 5 5 5 5;
+}
+.button-small{
+    -fx-font-size: 18;
+    -fx-padding: 5 5 5 5;
+}
+
+.background-picture{
+	-fx-background-color: rgba(166,157,160,0.2);
+}

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<fx:root type="javafx.scene.layout.BorderPane" id="AnchorPane" fx:id="contenedorPBP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="969.0" xmlns:fx="http://javafx.com/fxml">
+  <bottom>
+    <HBox prefHeight="32.0" />
+  </bottom>
+  <center>
+    <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+      <children>
+        <HBox alignment="CENTER_LEFT" spacing="15.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <children>
+            <HBox alignment="CENTER_LEFT" spacing="8.0">
+              <children>
+                <Separator prefWidth="20.0" />
+                <Label text="Agregar:" />
+                <TextField id="claveProductoAgregar" fx:id="claveProductoAgregarText" prefWidth="242.0" />
+                <Separator prefWidth="10.0" />
+                <Label text="Cant." />
+                <TextField fx:id="cantidadProductoAgregarText" prefWidth="65.0" text="1" />
+              </children>
+            </HBox>
+          </children>
+          <padding>
+            <Insets bottom="10.0" top="8.0" />
+          </padding>
+        </HBox>
+        <TableView id="tablaDetallesVenta" fx:id="tablaDetallesCompra" minWidth="620.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+          <columns>
+            <TableColumn prefWidth="75.0" text="Clave" fx:id="ClaveCol" />
+            <TableColumn minWidth="200.0" prefWidth="220.0" text="Descripción" fx:id="DescripcionCol" />
+            <TableColumn minWidth="75.0" text="P. U." fx:id="precioUnitarioCol" />
+            <TableColumn prefWidth="75.0" text="Cant." fx:id="cantidadCol" />
+            <TableColumn minWidth="75.0" text="Importe" fx:id="importeCol" />
+          </columns>
+        </TableView>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="-Infinity" vgrow="NEVER" />
+        <RowConstraints vgrow="ALWAYS" />
+      </rowConstraints>
+    </GridPane>
+  </center>
+  <right>
+    <VBox maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="280.0" prefWidth="300.0">
+      <children>
+        <Label id="" fx:id="notificacionLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="42.0" styleClass="notif" textAlignment="JUSTIFY" wrapText="true">
+          <VBox.margin>
+            <Insets left="-60.0" right="-10.0" top="-5.0" />
+          </VBox.margin>
+        </Label>
+        <HBox alignment="CENTER_LEFT" spacing="7.0">
+          <children>
+            <Label styleClass="label-big-monetario" text="Artículos:" />
+            <Label fx:id="totalArticulosLabel" alignment="CENTER_RIGHT" minWidth="155.0" styleClass="label-big-monetario" text="0" />
+          </children>
+          <padding>
+            <Insets bottom="20.0" top="10.0" />
+          </padding>
+        </HBox>
+        <Label styleClass="label-big-monetario" text="Importe Total:" />
+        <HBox alignment="CENTER_RIGHT">
+          <children>
+            <Label fx:id="importeTotalLabel" styleClass="importe-pagar" text="\$ 0.00" />
+          </children>
+          <padding>
+            <Insets bottom="15.0" right="2.0" top="5.0" />
+          </padding>
+        </HBox>
+        <VBox alignment="CENTER" spacing="15.0">
+          <children>
+            <Button id="cobrarButton" fx:id="registrarButton" mnemonicParsing="false" text="Registrar Compra" />
+            <Button fx:id="cancelarButton" mnemonicParsing="false" styleClass="btn-cancelar" text="Cancelar" />
+          </children>
+          <padding>
+            <Insets bottom="20.0" top="25.0" />
+          </padding>
+        </VBox>
+      </children>
+      <padding>
+        <Insets left="15.0" right="15.0" top="10.0" />
+      </padding>
+    </VBox>
+  </right>
+  <stylesheets>
+    <URL value="@../../css/GeneralCss.css" />
+  </stylesheets>
+</fx:root>

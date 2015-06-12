@@ -1,0 +1,28 @@
+/*
+ * Empty Stylesheet file.
+ */
+.mainFxmlClass {
+
+}
+.background {
+    /*-fx-background-image: url("CoarseGrid.png");*/
+    -fx-background-repeat: repeat;
+	-fx-background-color:
+        linear-gradient(#157cb3 0%, #258dc2 20%, #bde6f0 100%)
+        ,linear-gradient(#267c91, #fafeff),
+        radial-gradient(center 50% 0%, radius 100%, rgba(191,231,242,0.9), rgba(225,243,247,0.2));
+}
+/*
+.background
+{
+     -fx-background-repeat: repeat;
+	-fx-background-color:
+        linear-gradient(#FB5252 10%, #FABFBF 100%, #FCE4E4 100%)
+}
+
+.label{
+     -fx-font-family: "Sans-serif";
+    -fx-font-size: 20;
+    -fx-effect:dropshadow( one-pass-box , rgb(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );
+    -fx-border-width: 0;
+}*/

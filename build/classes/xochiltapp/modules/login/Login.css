@@ -1,0 +1,125 @@
+.background {
+    /*-fx-background-image: url("CoarseGrid.png");*/
+    -fx-background-repeat: repeat;
+	-fx-background-color:
+        linear-gradient(#157cb3 0%, #258dc2 20%, #bde6f0 100%)
+        ,linear-gradient(#267c91, #fafeff),
+        radial-gradient(center 50% 0%, radius 100%, rgba(191,231,242,0.9), rgba(225,243,247,0.2));
+}
+
+.top-segment {
+	-fx-background-color: rgba(255, 255, 255, 0.03);
+        /*
+	-fx-border-color: 
+		transparent transparent rgb(255, 255, 255, 0.08) transparent,
+		transparent transparent rgb(0, 89, 148, 0.9) transparent;
+	-fx-border-width: 1, 1.5;
+	-fx-border-insets: -1, 0; 
+        */
+}
+
+.label {
+    -fx-font-family: "Arial";
+    -fx-font-size: 18;
+    -fx-text-fill: rgb(0, 0, 0, 0.9);
+    -fx-effect: dropshadow( one-pass-box , rgb(0, 0, 0, 0.3), 0, 0.0 , 0 , 1 );
+}
+
+.notif{
+    -fx-text-fill: #A31414;
+}
+
+.profileTitle {
+    -fx-font-size: 18;
+}
+
+.hyperlink {
+    -fx-font-family: "Arial";
+    -fx-font-size: 18;
+    -fx-text-fill: rgb(255, 255, 255, 0.4);
+    -fx-effect: dropshadow( one-pass-box , rgb(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );
+    -fx-border-width: 0;
+}
+
+.hyperlink:focused {
+	-fx-text-fill: rgb(255, 255, 255, 0.6);
+}
+
+.check-box .box {
+	-fx-background-color:
+		rgb(255, 255, 255, 0.1),
+        rgb(0, 0, 0, 1),
+        -fx-outer-border,
+        -fx-inner-border,
+        -fx-body-color;
+    -fx-background-insets: 0 -1.6 -2 -1.6, -1.4, 0, 1, 2;
+}
+
+.check-box:focused .box {
+	-fx-background-color:
+		rgb(255, 255, 255, 0.15),
+        rgb(0, 0, 0, 0.8),
+        -fx-outer-border,
+        -fx-inner-border,
+        white;
+}
+
+.button .text {
+    -fx-effect: dropshadow( one-pass-box , rgb(0, 0, 0, 0.8), 0, 0.0 , 0 , -1 );
+}
+
+.button {
+    -fx-background-color:
+    	rgb(111, 158, 17, 0.9),
+    	rgb(255, 255, 255, 0.1),
+        /*#9bcc3f,*/
+        /*linear-gradient(#a3cc3b 0%, #a6c93c 20%, #b4d44c 100%),*/
+        /*linear-gradient(#89ba25, #86b32e),*/
+        radial-gradient(center 50% 0%, radius 100%, rgba(158,204,65,1),
+        rgba(255,255,255,0.1));
+    -fx-background-radius: 7, 6, 5, 4, 3, 5;
+    -fx-background-insets: -3 -3 -4 -3, -3, 0, 1, 2, 0;
+	-fx-font-family: "Arial";
+    -fx-text-fill: white;
+    -fx-font-size: 28;
+    /*-fx-text-fill: linear-gradient(white, #9fcf40);*/
+    -fx-padding: 10 10 10 10;
+}
+
+.button:focused, .button:hover {
+    -fx-background-color:
+    	rgb(255, 255, 255, 0.08),
+    	rgb(107, 156, 9, 0.8),
+        /*#090a0c,*/
+        /*linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%),*/
+        linear-gradient(#419e3e, #156e12),
+        radial-gradient(center 50% 0%, radius 100%, rgba(86,163,82,0.9),
+        rgba(255,255,255,0));
+}
+
+.text-field, .text-area {
+	-fx-font-size: 18;
+    -fx-background-color:
+    	rgb(150, 197, 217, 0.3),
+    	linear-gradient(rgb(150, 197, 217, 0.4), rgb(61, 107, 125, 0.8) 50%),
+        rgb(221, 234, 237);
+    -fx-background-insets: 0 0 -1 0, 0, 1.5;
+    -fx-background-radius: 6, 5, 4;
+    -fx-padding: 6 10 4 10;
+    -fx-effect: innershadow( gaussian, rgb(39, 60, 89, 0.9), 5, 0, 0, 2 );
+    -fx-font-family: "Arial";
+    -fx-margin-top: 10;
+}
+
+.text-area {
+	-fx-padding: 6 5 6 5;
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-prompt-text-fill:
+        rgb(128,128,128);
+    -fx-background-color:
+    	rgb(235, 235, 235, 0.5),
+        rgb(0, 0, 0, 0.4),
+        rgb(236, 245, 235);
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="javafx.scene.layout.VBox" layoutX="7.0" layoutY="7.0" prefHeight="373.0" prefWidth="227.0" spacing="9.0" styleClass="background-menu" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <HBox alignment="CENTER" prefHeight="54.0" prefWidth="199.0">
+      <children>
+        <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="64.0" prefWidth="199.0" text="V...." />
+      </children>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="54.0" prefWidth="199.0">
+      <children>
+        <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="64.0" prefWidth="199.0" text="P...." />
+      </children>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="54.0" prefWidth="199.0">
+      <children>
+        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleInventario_Button" prefHeight="64.0" prefWidth="199.0" text="I...." />
+      </children>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="54.0" prefWidth="199.0">
+      <children>
+        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleProveedores_Button" prefHeight="64.0" prefWidth="199.0" text="Po..." />
+      </children>
+    </HBox>
+  </children>
+  <stylesheets>
+    <URL value="@MenuCss.css" />
+  </stylesheets>
+</fx:root>

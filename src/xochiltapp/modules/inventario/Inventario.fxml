@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<fx:root type="javafx.scene.layout.BorderPane" id="rootPane" fx:id="contenedorPBP" xmlns:fx="http://javafx.com/fxml">
+  <center>
+    <GridPane>
+      <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="50.0" spacing="15.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+          <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="474.0" spacing="8.0">
+              <children>
+                <Separator prefWidth="20.0" />
+                <Label text="Buscar:" />
+                <TextField id="agregarProductoTxt" fx:id="buscarProductoTxt" prefWidth="242.0" />
+                <ComboBox fx:id="buscarEnCmb" minHeight="19.0" prefHeight="31.0" prefWidth="113.0" promptText="Inventario" />
+                <Line endX="-100.12132263183594" endY="-33.0" startX="-99.82843017578125" startY="-4.855451583862305" stroke="#606060">
+                  <HBox.margin>
+                    <Insets fx:id="x1" />
+                  </HBox.margin>
+                </Line>
+              </children>
+            </HBox>
+            <Button fx:id="agregarNuevoProductoBtn" minHeight="31.0" mnemonicParsing="false" prefHeight="31.0" styleClass="small-button" text="Agregar" />
+          </children>
+          <padding>
+            <Insets bottom="10.0" top="8.0" />
+          </padding>
+        </HBox>
+        <SplitPane dividerPositions="0.568609865470852" focusTraversable="true" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+          <items>
+            <AnchorPane maxHeight="1.7976931348623157E308">
+              <children>
+                <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <children>
+                    <TableView fx:id="inventarioTable" maxHeight="1.7976931348623157E308" VBox.vgrow="SOMETIMES">
+                      <columns>
+                        <TableColumn minWidth="85.0" prefWidth="90.0" styleClass="derecha" text="Clave" fx:id="ClaveCol" />
+                        <TableColumn prefWidth="250.0" text="Descripción" fx:id="DescripcionCol" />
+                        <TableColumn prefWidth="75.0" styleClass="derecha" text="P. U." fx:id="PUCol" />
+                        <TableColumn prefWidth="75.0" styleClass="derecha" text="Exist." fx:id="ExistsCol" />
+                        <TableColumn prefWidth="75.0" text="Activo" fx:id="ActivoCol" />
+                        <TableColumn prefWidth="130.0" text="Actualizado" fx:id="ActualizadoCol" />
+                      </columns>
+                    </TableView>
+                    <HBox alignment="CENTER_RIGHT" spacing="8.0">
+                      <children>
+                        <Label text="Total de productos:" />
+                        <Label fx:id="totalProductos" styleClass="bold-label" text="0" />
+                      </children>
+                      <padding>
+                        <Insets bottom="10.0" right="20.0" top="10.0" />
+                      </padding>
+                    </HBox>
+                  </children>
+                </VBox>
+              </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="1.7976931348623157E308">
+              <children>
+                <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <children>
+                    <TableView fx:id="proveedoresProductoTbl" VBox.vgrow="SOMETIMES">
+                      <columns>
+                        <TableColumn minWidth="160.0" prefWidth="160.0" text="Proveedor" fx:id="nombreProveedorCol" />
+                        <TableColumn minWidth="70.0" prefWidth="75.0" text="Precio" fx:id="precioProveedorCol" />
+                        <TableColumn minWidth="150.0" prefWidth="175.0" text="Teléfono" fx:id="telefonoProveedorCol" />
+                      </columns>
+                    </TableView>
+                    <HBox alignment="CENTER_RIGHT">
+                      <children>
+                        <Label />
+                      </children>
+                      <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                      </padding>
+                    </HBox>
+                  </children>
+                </VBox>
+              </children>
+            </AnchorPane>
+          </items>
+        </SplitPane>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+      </columnConstraints>
+      <padding>
+        <Insets left="5.0" right="15.0" top="10.0" />
+      </padding>
+      <rowConstraints>
+        <RowConstraints minHeight="-Infinity" />
+        <RowConstraints minHeight="-Infinity" vgrow="ALWAYS" />
+        <RowConstraints minHeight="-Infinity" />
+      </rowConstraints>
+    </GridPane>
+  </center>
+  <stylesheets>
+    <URL value="@../../css/GeneralCss.css" />
+  </stylesheets>
+</fx:root>
